@@ -1,11 +1,16 @@
 import './App.css';
-import Navbar from './Navbar';
+import CryptoPrices from './Components/CryptoPrices';
+import PopulationChart from './Components/PopulationChart';
+import Sidebar from './Components/Sidebar';
 
 function App() {
   return (
-    <div className="App">
-      {/* <Sidebar/>
-      <Navbar/> */}
+    <div className="App" >
+      <Sidebar>
+      <PopulationChart/>
+      <CryptoPrices/>
+      </Sidebar>
+      
     </div>
   );
 }
