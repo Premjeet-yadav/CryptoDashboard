@@ -58,7 +58,7 @@ const CryptoPrices = () => {
         </div>
         <div className="crypto-card">
           <div className="crypto-info">
-            <h2>Binance</h2>
+            <h2>Euro</h2>
             <h2>€{bitcoin.EUR.rate}</h2>
             <button>Trade</button>
           </div>
