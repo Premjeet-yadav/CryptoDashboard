@@ -43,6 +43,7 @@ const Sidebar = ({children}) => {
               <div
                 key={i}
                 className={"Item"}
+                
               >
                 <div className="icon">{item.icon}</div>
                 <div

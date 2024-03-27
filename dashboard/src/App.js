@@ -8,6 +8,7 @@ function App() {
     <div className="App" >
       <Sidebar>
       <PopulationChart/>
+      <h1>Bitcoin Price</h1>
       <CryptoPrices/>
       </Sidebar>
       
