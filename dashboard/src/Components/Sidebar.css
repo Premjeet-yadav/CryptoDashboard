@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+  }
+  
+  .sidebar {
+    opacity: 80%;
+    position: fixed;
+    transition: width 0.5s;
+    min-height: 100vh;
+    background-color: #333;
+    color: white;
+    padding-top: 40px;
+  }
+  
+  .bars {
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .Item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .Item:hover,
+  .Item.active {
+    background-color: orange;
+  }
+  
+  .icon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .Item_name {
+    transition: display 0.5s;
+  }
+  
+  .main {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  

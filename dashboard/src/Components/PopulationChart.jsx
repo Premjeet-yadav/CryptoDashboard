@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import axios from 'axios';
+import './PopulationChart.css'
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -53,9 +54,11 @@ const PopulationChart = () => {
     }, []);
 
     return (
-        <div style={{ backgroundColor: '#333',display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', fontSize: 'calc(10px + 2vmin)', color: 'white' }}>
-            <h1>Population Data</h1>
-            <div style={{ width: '80%', height: '80%' }}>
+        <div className='outer'>
+            <h1>Hello Broklyn Simmons!</h1>
+            <h1>Welcome to <span style={{color:'orange'}} >Spot Trading</span></h1>
+            <h2>Population Data of USA</h2>
+            <div className='chart'>
                 <Line
                     data={graph}
                     options={{
@@ -91,6 +94,7 @@ const PopulationChart = () => {
                     }}
                 />
             </div>
+            
         </div>
     );
 };

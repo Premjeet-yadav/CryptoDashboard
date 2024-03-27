@@ -7,9 +7,11 @@ function App() {
   return (
     <div className="App" >
       <Sidebar>
+      <div id='box' >
       <PopulationChart/>
       <h1>Bitcoin Price</h1>
       <CryptoPrices/>
+      </div>
       </Sidebar>
       
     </div>

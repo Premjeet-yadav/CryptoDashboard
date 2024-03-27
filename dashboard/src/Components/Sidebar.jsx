@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { FiHome ,FiSquare} from "react-icons/fi";
-import {BiDollar} from 'react-icons/bi'
+import { FiHome, FiSquare } from "react-icons/fi";
+import { BiDollar } from 'react-icons/bi'
 import { FaBars } from "react-icons/fa";
-import "../App.css";
+//import "../App.css";
+import './Sidebar.css'
 
-const Sidebar = ({children}) => {
+const Sidebar = ({ children }) => {
   const [isopen, setIsOpen] = useState(false);
+  const [activeTab,setActiveTab] = useState('')
   const toggle = () => setIsOpen(!isopen);
 
   const Items = [
@@ -24,7 +26,7 @@ const Sidebar = ({children}) => {
   ];
 
   return (
-    <div>
+    <>
       <div className="container">
         <div
           style={{ width: isopen ? "150px" : "50px" }}
@@ -42,8 +44,8 @@ const Sidebar = ({children}) => {
             return (
               <div
                 key={i}
-                className={"Item"}
-                
+                className={`Item ${activeTab === item.name ? "active" : ""}`}
+                onClick={() => setActiveTab(item.name)}
               >
                 <div className="icon">{item.icon}</div>
                 <div
@@ -55,10 +57,11 @@ const Sidebar = ({children}) => {
               </div>
             );
           })}
+
         </div>
         <main>{children}</main>
       </div>
-    </div>
+    </>
   );
 };
 
